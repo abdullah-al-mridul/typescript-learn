@@ -238,3 +238,10 @@ let car3 = <Car3>someObject2;
 
 // console.log(someObject2.brand); // Output: Toyota
 // console.log(someObject2.model); // Output: Corolla
+
+//generics with function
+function plus<F extends number, S extends number>(first: F, second: S): number {
+  return first + second;
+}
+
+// console.log(plus(1, 2)); // 3

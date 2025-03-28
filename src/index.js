@@ -133,3 +133,8 @@ let someObject2 = { brand: "Toyota", model: "Corolla" };
 let car3 = someObject2;
 // console.log(someObject2.brand); // Output: Toyota
 // console.log(someObject2.model); // Output: Corolla
+//generics with function
+function plus(first, second) {
+    return first + second;
+}
+// console.log(plus(1, 2)); // 3
