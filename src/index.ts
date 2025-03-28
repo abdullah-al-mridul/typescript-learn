@@ -302,3 +302,16 @@ const nameAgeMap: Record<string, number> = {
   Bob: 25,
 };
 // console.log(nameAgeMap); // { Alice: 21, Bob: 25 }
+
+interface Person2 {
+  name: string;
+  age: number;
+  location?: string;
+}
+
+const bob: Omit<Person2, "age" | "location"> = {
+  name: "Bob",
+  // `Omit` has removed age and location from the type and they can't be defined here
+};
+
+// console.log(bob); // { name: 'Bob' }

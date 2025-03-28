@@ -158,4 +158,8 @@ const nameAgeMap = {
     Alice: 21,
     Bob: 25,
 };
-// console.log(nameAgeMap); // { Alice: 21, Bob: 25 }
+const bob = {
+    name: "Bob",
+    // `Omit` has removed age and location from the type and they can't be defined here
+};
+// console.log(bob); // { name: 'Bob' }
