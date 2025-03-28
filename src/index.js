@@ -169,8 +169,17 @@ const bob2 = {
     // `Pick` has only kept name, so age and location were removed from the type and they can't be defined here
 };
 const value = true; // a string cannot be used here since Exclude removed it from the type.
-const point = {
+const point2 = {
     x: 10,
     y: 20,
 };
-// console.log(point); // { x: 10, y: 20 }
+const point3 = {
+    x: 10,
+    y: 20,
+};
+const person5 = {
+    name: "Dylan",
+    age: 35,
+};
+// person5.name = "Israel"; //error
+// console.log(person5);

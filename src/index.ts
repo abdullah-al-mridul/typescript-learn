@@ -338,9 +338,32 @@ const value: Exclude<Primitive, string> = true; // a string cannot be used here 
 
 // console.log(value)
 
+// utility type returntype
 type PointGenerator = () => { x: number; y: number };
-const point: ReturnType<PointGenerator> = {
+const point2: ReturnType<PointGenerator> = {
   x: 10,
   y: 20,
 };
-// console.log(point); // { x: 10, y: 20 }
+// console.log(point2); // { x: 10, y: 20 }
+
+// utility type parameters
+type PointPrinter2 = (p: { x: number; y: number }) => void;
+const point3: Parameters<PointPrinter2>[0] = {
+  x: 10,
+  y: 20,
+};
+
+// console.log(point3); // { x: 10, y: 20 }
+
+// utility type readonly
+interface Person5 {
+  name: string;
+  age: number;
+}
+const person5: Readonly<Person5> = {
+  name: "Dylan",
+  age: 35,
+};
+// person5.name = "Israel"; //error
+
+// console.log(person5);
