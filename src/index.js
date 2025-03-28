@@ -60,4 +60,41 @@ const person = {
     isEmployed: false,
     hobbies: ["coding", 10],
 };
-console.log(person);
+// console.log(person);
+//object types signature index
+const person2 = {
+    name: "abdullah",
+    age: 17,
+    isEmployed: false,
+    hobbies: ["coding", 10],
+};
+// console.log(person2);
+//enum is a special type in typescript that allows you to define a set of named constants
+var Serial;
+(function (Serial) {
+    Serial[Serial["one"] = 1] = "one";
+    Serial[Serial["two"] = 2] = "two";
+    Serial[Serial["three"] = 3] = "three";
+    Serial[Serial["four"] = 4] = "four";
+    Serial[Serial["five"] = 5] = "five";
+})(Serial || (Serial = {}));
+const person3 = {
+    name: "abdullah",
+    age: 17,
+    isEmployed: false,
+    hobbies: ["coding", 10],
+};
+const person4 = {
+    name: "abdullah",
+    age: 17,
+    isEmployed: false,
+    hobbies: ["coding", 10],
+};
+const car = {
+    name: "abdullah",
+    age: 17,
+    isEmployed: false,
+    hobbies: ["coding", 10],
+    brands: ["toyota", "honda", "bmw"],
+};
+// console.log(car);

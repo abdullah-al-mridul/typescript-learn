@@ -86,4 +86,77 @@ const person: {
   hobbies: ["coding", 10],
 };
 
-console.log(person);
+// console.log(person);
+
+//object types signature index
+const person2: {
+  [key: string]: string | (string | number) | boolean | [string, number];
+} = {
+  name: "abdullah",
+  age: 17,
+  isEmployed: false,
+  hobbies: ["coding", 10],
+};
+
+// console.log(person2);
+
+//enum is a special type in typescript that allows you to define a set of named constants
+enum Serial {
+  one = 1,
+  two,
+  three,
+  four,
+  five,
+}
+
+// console.log(Serial.one); // 1
+// console.log(Serial.two); // 2
+
+//alias type
+type Person = {
+  name: string;
+  age: number | string;
+  isEmployed: boolean;
+  hobbies: [string, number];
+  isMarried?: boolean; //optional property
+};
+const person3: Person = {
+  name: "abdullah",
+  age: 17,
+  isEmployed: false,
+  hobbies: ["coding", 10],
+};
+
+// console.log(person3);
+
+//interfaces
+interface PersonInterface {
+  name: string;
+  age: number | string;
+  isEmployed: boolean;
+  hobbies: [string, number];
+  isMarried?: boolean; //optional property
+}
+const person4: PersonInterface = {
+  name: "abdullah",
+  age: 17,
+  isEmployed: false,
+  hobbies: ["coding", 10],
+};
+
+// console.log(person4);
+
+//extend interface
+
+interface Car extends PersonInterface {
+  brands: string[];
+}
+const car: Car = {
+  name: "abdullah",
+  age: 17,
+  isEmployed: false,
+  hobbies: ["coding", 10],
+  brands: ["toyota", "honda", "bmw"],
+};
+
+// console.log(car);
