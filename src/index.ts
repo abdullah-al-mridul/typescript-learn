@@ -368,6 +368,7 @@ const person5: Readonly<Person5> = {
 
 // console.log(person5);
 
+// utility type keyof
 interface Person6 {
   name: string;
   age: number;
@@ -380,4 +381,4 @@ let person6 = {
   name: "Max",
   age: 27,
 };
-printPersonProperty(person6, "name"); // Printing person property name: "Max"
+// printPersonProperty(person6, "name"); // Printing person property name: "Max"

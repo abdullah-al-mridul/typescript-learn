@@ -189,4 +189,4 @@ let person6 = {
     name: "Max",
     age: 27,
 };
-printPersonProperty(person6, "name"); // Printing person property name: "Max"
+// printPersonProperty(person6, "name"); // Printing person property name: "Max"
