@@ -154,3 +154,8 @@ const homeReq = {
     isEmployed: false,
 }; // makes all properties required
 // console.log(homeReq);
+const nameAgeMap = {
+    Alice: 21,
+    Bob: 25,
+};
+// console.log(nameAgeMap); // { Alice: 21, Bob: 25 }
