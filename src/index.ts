@@ -315,3 +315,16 @@ const bob: Omit<Person2, "age" | "location"> = {
 };
 
 // console.log(bob); // { name: 'Bob' }
+
+interface Person3 {
+  name: string;
+  age: number;
+  location?: string;
+}
+
+const bob2: Pick<Person, "name"> = {
+  name: "Bob",
+  // `Pick` has only kept name, so age and location were removed from the type and they can't be defined here
+};
+
+console.log(bob2); // { name: 'Bob' }

@@ -162,4 +162,8 @@ const bob = {
     name: "Bob",
     // `Omit` has removed age and location from the type and they can't be defined here
 };
-// console.log(bob); // { name: 'Bob' }
+const bob2 = {
+    name: "Bob",
+    // `Pick` has only kept name, so age and location were removed from the type and they can't be defined here
+};
+console.log(bob2); // { name: 'Bob' }
