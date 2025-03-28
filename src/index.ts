@@ -184,3 +184,29 @@ const optionalParameter = (
 };
 // optionalParameter(60, 70);
 // optionalParameter(60);
+
+//named parameter
+function divide({
+  dividend,
+  divisor,
+}: {
+  dividend: number;
+  divisor: number;
+}): number {
+  return dividend / divisor;
+}
+
+// console.log(divide({ dividend: 10, divisor: 2 })); // 5
+
+//rest parameter
+function add(a: number, b: number, ...rest: number[]) {
+  return a + b + rest.reduce((p, c) => p + c, 0);
+}
+// console.log(add(1, 2, 3, 4, 5)); // 15
+
+type Negate = (value: number) => number;
+
+// in this function, the parameter `value` automatically gets assigned the type `number` from the type `Negate`
+const negateFunction: Negate = (value) => value * -1;
+
+// console.log(negateFunction(10)); // -10
