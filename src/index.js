@@ -190,3 +190,4 @@ let person6 = {
     age: 27,
 };
 // printPersonProperty(person6, "name"); // Printing person property name: "Max"
+//thank you for reading this practice file. I hope you enjoyed it. if you have any question please feel free to ask me. I will be happy to help you.
