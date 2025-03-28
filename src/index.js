@@ -154,10 +154,12 @@ const homeReq = {
     isEmployed: false,
 }; // makes all properties required
 // console.log(homeReq);
+// utility type record
 const nameAgeMap = {
     Alice: 21,
     Bob: 25,
 };
+// utility type omit
 const bob = {
     name: "Bob",
     // `Omit` has removed age and location from the type and they can't be defined here
@@ -166,4 +168,9 @@ const bob2 = {
     name: "Bob",
     // `Pick` has only kept name, so age and location were removed from the type and they can't be defined here
 };
-console.log(bob2); // { name: 'Bob' }
+const value = true; // a string cannot be used here since Exclude removed it from the type.
+const point = {
+    x: 10,
+    y: 20,
+};
+// console.log(point); // { x: 10, y: 20 }

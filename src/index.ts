@@ -297,6 +297,7 @@ const homeReq: Required<HomeReq> = {
 
 // console.log(homeReq);
 
+// utility type record
 const nameAgeMap: Record<string, number> = {
   Alice: 21,
   Bob: 25,
@@ -309,6 +310,7 @@ interface Person2 {
   location?: string;
 }
 
+// utility type omit
 const bob: Omit<Person2, "age" | "location"> = {
   name: "Bob",
   // `Omit` has removed age and location from the type and they can't be defined here
@@ -316,6 +318,7 @@ const bob: Omit<Person2, "age" | "location"> = {
 
 // console.log(bob); // { name: 'Bob' }
 
+// utility type pick
 interface Person3 {
   name: string;
   age: number;
@@ -327,4 +330,17 @@ const bob2: Pick<Person, "name"> = {
   // `Pick` has only kept name, so age and location were removed from the type and they can't be defined here
 };
 
-console.log(bob2); // { name: 'Bob' }
+// console.log(bob2); // { name: 'Bob' }
+
+// utility type exclude
+type Primitive = string | number | boolean;
+const value: Exclude<Primitive, string> = true; // a string cannot be used here since Exclude removed it from the type.
+
+// console.log(value)
+
+type PointGenerator = () => { x: number; y: number };
+const point: ReturnType<PointGenerator> = {
+  x: 10,
+  y: 20,
+};
+// console.log(point); // { x: 10, y: 20 }
