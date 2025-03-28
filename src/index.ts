@@ -1,3 +1,5 @@
+// __this practice file is made by abdullah al mridul__
+
 // there are two main ways to defiene type in typescript...
 
 // 1. explicit
@@ -7,9 +9,10 @@
 
 const fullName: string = "John Doe";
 const age: number = 30;
+const mixed: number | string | string[] = 30;
 const isEmployed: boolean = true;
 
-// console.log(fullName, age, isEmployed);
+// console.log(fullName, age, mixed, isEmployed);
 
 // implicit type
 
@@ -38,9 +41,49 @@ const ages: number[] = [30, 25, 35];
 const mixedArray: (string | number)[] = ["John", 10];
 //this is a tuple array
 const tupleArray: [string, number] = ["str", 0];
-const tupleArray2: [string, number, boolean][] = [
-  ["str", 0, true],
-  ["str", 0, false],
+//named tuple array
+const tupleArray2: [
+  name: string,
+  age: number,
+  retired: boolean,
+  numToString: (num: number) => string
+][] = [
+  [
+    "str",
+    0,
+    true,
+    (num: number) => {
+      return num.toString();
+    },
+  ],
+  [
+    "str",
+    0,
+    false,
+    (num: number) => {
+      return num.toString();
+    },
+  ],
 ];
+//read only tuple and array
+const tupleArrayReadOnly: readonly [string, number] = ["str", 0];
+//will throw error
+// tupleArrayReadOnly.push("0");
 
 // console.log(names, ages, mixedArray, tupleArray, tupleArray2);
+
+//object types
+const person: {
+  name: string;
+  age: number | string;
+  isEmployed: boolean;
+  hobbies: [string, number];
+  isMarried?: boolean; //optional property
+} = {
+  name: "abdullah",
+  age: 17,
+  isEmployed: false,
+  hobbies: ["coding", 10],
+};
+
+console.log(person);

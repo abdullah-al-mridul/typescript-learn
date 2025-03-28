@@ -1,12 +1,14 @@
 "use strict";
+// __this practice file is made by abdullah al mridul__
 // there are two main ways to defiene type in typescript...
 // 1. explicit
 // 2. implicit
 // explicit type
 const fullName = "John Doe";
 const age = 30;
+const mixed = 30;
 const isEmployed = true;
-// console.log(fullName, age, isEmployed);
+// console.log(fullName, age, mixed, isEmployed);
 // implicit type
 let fullNameImplicit = "John Doe"; // guess string
 let ageImplicit = 30; // guess number
@@ -27,8 +29,35 @@ const ages = [30, 25, 35];
 const mixedArray = ["John", 10];
 //this is a tuple array
 const tupleArray = ["str", 0];
+//named tuple array
 const tupleArray2 = [
-    ["str", 0, true],
-    ["str", 0, false],
+    [
+        "str",
+        0,
+        true,
+        (num) => {
+            return num.toString();
+        },
+    ],
+    [
+        "str",
+        0,
+        false,
+        (num) => {
+            return num.toString();
+        },
+    ],
 ];
+//read only tuple and array
+const tupleArrayReadOnly = ["str", 0];
+//will throw error
+// tupleArrayReadOnly.push("0");
 // console.log(names, ages, mixedArray, tupleArray, tupleArray2);
+//object types
+const person = {
+    name: "abdullah",
+    age: 17,
+    isEmployed: false,
+    hobbies: ["coding", 10],
+};
+console.log(person);
