@@ -174,9 +174,13 @@ const voidFunction = (param: number): void => {
 };
 // voidFunction(60);
 
-// optional parameter
-const optionalParameter = (param: number, param2?: number): void => {
-  console.log(param, param2 || 0);
+// optional parameter and default parameter
+const optionalParameter = (
+  param: number,
+  param2?: number,
+  param3: number = 5
+): void => {
+  console.log(param, param2 || 0, param3);
 };
 // optionalParameter(60, 70);
 // optionalParameter(60);
