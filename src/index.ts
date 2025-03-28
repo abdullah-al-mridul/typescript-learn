@@ -160,3 +160,10 @@ const car: Car = {
 };
 
 // console.log(car);
+
+//union type
+const returnValue = (param: number | string): number | string => {
+  return param;
+};
+
+// console.log(returnValue(50));

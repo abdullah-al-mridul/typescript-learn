@@ -98,3 +98,8 @@ const car = {
     brands: ["toyota", "honda", "bmw"],
 };
 // console.log(car);
+//union type
+const returnValue = (param) => {
+    return param;
+};
+// console.log(returnValue(50));
