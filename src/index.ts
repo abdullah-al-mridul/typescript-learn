@@ -13,8 +13,17 @@ const isEmployed: boolean = true;
 
 // implicit type
 
-const fullNameImplicit = "John Doe"; // guess string
-const ageImplicit = 30; // guess number
-const isEmployedImplicit = true; // guess boolean
+let fullNameImplicit = "John Doe"; // guess string
+let ageImplicit = 30; // guess number
+let isEmployedImplicit = true; // guess boolean
+
+// fullName = 30;
+//it will give error because we have defined fullName as string
 
 // console.log(fullNameImplicit, ageImplicit, isEmployedImplicit);
+
+// type any
+let anyType: any = "John Doe";
+anyType = 30; // no error cause we have defined anyType as any
+
+// console.log(anyType);
