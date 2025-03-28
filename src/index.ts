@@ -210,3 +210,17 @@ type Negate = (value: number) => number;
 const negateFunction: Negate = (value) => value * -1;
 
 // console.log(negateFunction(10)); // -10
+
+//casting with as keyword
+interface Car2 {
+  brand: string;
+  model: string;
+}
+
+let someObject: any = { brand: "Toyota", model: "Corolla" };
+
+// Casting 'someObject' to the Car interface type
+let car2 = someObject as Car2;
+
+console.log(car2.brand); // Output: Toyota
+console.log(car2.model); // Output: Corolla

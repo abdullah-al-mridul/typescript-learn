@@ -125,4 +125,8 @@ function add(a, b, ...rest) {
 }
 // in this function, the parameter `value` automatically gets assigned the type `number` from the type `Negate`
 const negateFunction = (value) => value * -1;
-// console.log(negateFunction(10)); // -10
+let someObject = { brand: "Toyota", model: "Corolla" };
+// Casting 'someObject' to the Car interface type
+let car2 = someObject;
+console.log(car2.brand); // Output: Toyota
+console.log(car2.model); // Output: Corolla
