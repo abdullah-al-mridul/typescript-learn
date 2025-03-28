@@ -245,3 +245,25 @@ function plus<F extends number, S extends number>(first: F, second: S): number {
 }
 
 // console.log(plus(1, 2)); // 3
+
+// type alias generics
+type Wrapped<A, B> = { value: A | B };
+
+const wrapObj: Wrapped<string, number> = {
+  value: 10,
+};
+// console.log(wrapObj);
+
+// generic interface
+interface GenericInterface<T = string> {
+  value: T;
+  getValue: () => T;
+}
+
+const genericObj: GenericInterface<string> = {
+  value: "abdullah",
+  getValue: () => {
+    return genericObj.value;
+  },
+};
+// console.log(genericObj.getValue()); // abdullah

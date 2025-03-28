@@ -137,4 +137,13 @@ let car3 = someObject2;
 function plus(first, second) {
     return first + second;
 }
-// console.log(plus(1, 2)); // 3
+const wrapObj = {
+    value: 10,
+};
+const genericObj = {
+    value: "abdullah",
+    getValue: () => {
+        return genericObj.value;
+    },
+};
+// console.log(genericObj.getValue()); // abdullah
