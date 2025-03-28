@@ -108,3 +108,9 @@ const voidFunction = (param) => {
     console.log(param);
 };
 // voidFunction(60);
+// optional parameter
+const optionalParameter = (param, param2) => {
+    console.log(param, param2 || 0);
+};
+// optionalParameter(60, 70);
+// optionalParameter(60);
