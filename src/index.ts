@@ -367,3 +367,17 @@ const person5: Readonly<Person5> = {
 // person5.name = "Israel"; //error
 
 // console.log(person5);
+
+interface Person6 {
+  name: string;
+  age: number;
+}
+// `keyof Person` here creates a union type of "name" and "age", other strings will not be allowed
+function printPersonProperty(person: Person6, property: keyof Person6) {
+  console.log(`Printing person property ${property}: "${person[property]}"`);
+}
+let person6 = {
+  name: "Max",
+  age: 27,
+};
+printPersonProperty(person6, "name"); // Printing person property name: "Max"
