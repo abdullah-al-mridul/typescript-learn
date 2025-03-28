@@ -222,5 +222,19 @@ let someObject: any = { brand: "Toyota", model: "Corolla" };
 // Casting 'someObject' to the Car interface type
 let car2 = someObject as Car2;
 
-console.log(car2.brand); // Output: Toyota
-console.log(car2.model); // Output: Corolla
+// console.log(car2.brand); // Output: Toyota
+// console.log(car2.model); // Output: Corolla
+
+// casting with angle bracket syntax
+interface Car3 {
+  brand: string;
+  model: string;
+}
+
+let someObject2: any = { brand: "Toyota", model: "Corolla" };
+
+// Casting 'someObject' to the Car interface type
+let car3 = <Car3>someObject2;
+
+// console.log(someObject2.brand); // Output: Toyota
+// console.log(someObject2.model); // Output: Corolla

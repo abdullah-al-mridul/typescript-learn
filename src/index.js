@@ -128,5 +128,8 @@ const negateFunction = (value) => value * -1;
 let someObject = { brand: "Toyota", model: "Corolla" };
 // Casting 'someObject' to the Car interface type
 let car2 = someObject;
-console.log(car2.brand); // Output: Toyota
-console.log(car2.model); // Output: Corolla
+let someObject2 = { brand: "Toyota", model: "Corolla" };
+// Casting 'someObject' to the Car interface type
+let car3 = someObject2;
+// console.log(someObject2.brand); // Output: Toyota
+// console.log(someObject2.model); // Output: Corolla
