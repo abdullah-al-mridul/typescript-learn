@@ -167,3 +167,9 @@ const returnValue = (param: number | string): number | string => {
 };
 
 // console.log(returnValue(50));
+
+//void function type for no return value
+const voidFunction = (param: number): void => {
+  console.log(param);
+};
+// voidFunction(60);

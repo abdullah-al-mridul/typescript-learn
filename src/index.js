@@ -103,3 +103,8 @@ const returnValue = (param) => {
     return param;
 };
 // console.log(returnValue(50));
+//void function type for no return value
+const voidFunction = (param) => {
+    console.log(param);
+};
+// voidFunction(60);
