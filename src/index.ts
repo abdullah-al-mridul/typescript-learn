@@ -268,7 +268,7 @@ const genericObj: GenericInterface<string> = {
 };
 // console.log(genericObj.getValue()); // abdullah
 
-// utility types
+// utility type partial
 type Home = {
   id: number;
   name: string;
@@ -279,3 +279,20 @@ type Home = {
 const home: Partial<Home> = {}; // makes all properties optional
 
 // console.log(home); // {}
+
+// utility type required
+type HomeReq = {
+  id: number;
+  name: string;
+  age: number;
+  isEmployed: boolean;
+};
+
+const homeReq: Required<HomeReq> = {
+  id: 1,
+  name: "abdullah",
+  age: 17,
+  isEmployed: false,
+}; // makes all properties required
+
+// console.log(homeReq);

@@ -147,4 +147,10 @@ const genericObj = {
     },
 };
 const home = {}; // makes all properties optional
-// console.log(home); // {}
+const homeReq = {
+    id: 1,
+    name: "abdullah",
+    age: 17,
+    isEmployed: false,
+}; // makes all properties required
+// console.log(homeReq);
