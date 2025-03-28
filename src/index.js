@@ -146,4 +146,5 @@ const genericObj = {
         return genericObj.value;
     },
 };
-// console.log(genericObj.getValue()); // abdullah
+const home = {}; // makes all properties optional
+// console.log(home); // {}

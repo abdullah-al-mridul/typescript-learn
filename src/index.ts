@@ -267,3 +267,15 @@ const genericObj: GenericInterface<string> = {
   },
 };
 // console.log(genericObj.getValue()); // abdullah
+
+// utility types
+type Home = {
+  id: number;
+  name: string;
+  age: number;
+  isEmployed: boolean;
+};
+
+const home: Partial<Home> = {}; // makes all properties optional
+
+// console.log(home); // {}
